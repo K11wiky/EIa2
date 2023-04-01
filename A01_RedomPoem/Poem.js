@@ -1,56 +1,40 @@
-var Gedicht;
-(function (Gedicht) {
-    // Arrays für Subjekte, Verben und Objekte
-    let subjects = ["Harry", "Hermine", "Ron", "Hagrid", "Snape"];
-    let verbs = ["braut", "liebt", "studiert", "hasst", "zaubert"];
-    let objects = ["Zaubertränke", "Lupin", "Hermine", "den Stein der Weisen", "Quidditch"];
-    // Funktion, die ein Gedicht generiert
-    function generatePoem() {
-        let verse = ""; // leere Vers-Variable
-        let randSubjectIndex = Math.floor(Math.random() * subjects.length); // zufällige Indexauswahl für Subjekt
-        let randVerbIndex = Math.floor(Math.random() * verbs.length); // zufällige Indexauswahl für Verb
-        let randObjectIndex = Math.floor(Math.random() * objects.length); // zufällige Indexauswahl für Objekt
-        // Füge das zufällig ausgewählte Subjekt, Verb und Objekt zum Vers hinzu
-        verse += subjects.splice(randSubjectIndex, 1)[0]; // Schneide das ausgewählte Subjekt aus dem Array und füge es zum Vers hinzu
-        verse += " ";
-        verse += verbs.splice(randVerbIndex, 1)[0]; // Schneide das ausgewählte Verb aus dem Array und füge es zum Vers hinzu
-        verse += " ";
-        verse += objects.splice(randObjectIndex, 1)[0]; // Schneide das ausgewählte Objekt aus dem Array und füge es zum Vers hinzu
-        // Wiederhole das Gleiche für die restlichen Zeilen
-        randSubjectIndex = Math.floor(Math.random() * subjects.length);
-        randVerbIndex = Math.floor(Math.random() * verbs.length);
-        randObjectIndex = Math.floor(Math.random() * objects.length);
-        verse += "\n";
-        verse += subjects.splice(randSubjectIndex, 1)[0];
-        verse += " ";
-        verse += verbs.splice(randVerbIndex, 1)[0];
-        verse += " ";
-        verse += objects.splice(randObjectIndex, 1)[0];
-        randSubjectIndex = Math.floor(Math.random() * subjects.length);
-        randVerbIndex = Math.floor(Math.random() * verbs.length);
-        randObjectIndex = Math.floor(Math.random() * objects.length);
-        verse += "\n";
-        verse += subjects.splice(randSubjectIndex, 1)[0];
-        verse += " ";
-        verse += verbs.splice(randVerbIndex, 1)[0];
-        verse += " ";
-        verse += objects.splice(randObjectIndex, 1)[0];
-        randSubjectIndex = Math.floor(Math.random() * subjects.length);
-        randVerbIndex = Math.floor(Math.random() * verbs.length);
-        randObjectIndex = Math.floor(Math.random() * objects.length);
-        verse += "\n";
-        verse += subjects.splice(randSubjectIndex, 1)[0];
-        verse += " ";
-        verse += verbs.splice(randVerbIndex, 1)[0];
-        verse += " ";
-        verse += objects.splice(randObjectIndex, 1)[0];
-        return verse; // Rückgabe des Gedichts
+var GedichtsGenerator;
+(function (GedichtsGenerator) {
+    // Die Funktion generiert ein Gedicht aus zufällig kombinierten Sätzen.
+    // Die Sätze bestehen aus einem Subjekt, Verb und Objekt.
+    // Die Worte für jedes Element werden als Parameter als Arrays übergeben.
+    function generate(subjects, verbs, objects) {
+        // Initialisiere eine leere Variable für das Gedicht
+        let poem = '';
+        // Schleife für jede Zeile des Gedichts
+        for (let i = 0; i < 5; i++) {
+            // Generiere einen Satz aus zufällig gewähltem Subjekt, Verb und Objekt
+            let sentence = generateSentence(subjects, verbs, objects);
+            // Füge den Satz zum Gedicht hinzu
+            poem += sentence;
+            // Füge einen Zeilenumbruch hinzu, außer beim letzten Satz
+            if (i < 4) {
+                poem += '\n';
+            }
+        }
+        // Gib das Gedicht zurück
+        return poem;
     }
-    Gedicht.generatePoem = generatePoem;
-    // Debugging-Kommentare
-    console.log("Start");
-    console.log(generatePoem());
-    console.log(generatePoem());
-    console.log(generatePoem());
-})(Gedicht || (Gedicht = {}));
+    GedichtsGenerator.generate = generate;
+    // Funktion, um einen Satz aus zufälligen Subjekt, Verb und Objekt zu generieren
+    function generateSentence(subjects, verbs, objects) {
+        if (subjects.length === 0 || verbs.length === 0 || objects.length === 0) {
+            throw new Error('Not enough words to generate sentence');
+        }
+        // Initialisiere leere Variablen für Subjekt, Verb und Objekt
+        let subject = '';
+        let verb = '';
+        let object = '';
+        // Wähle zufälliges Subjekt, Verb und Objekt
+        let subjectIndex = Math.floor(Math.random() * subjects.length);
+        subject = subjects.splice(subjectIndex, 1)[0]; // Entferne das ausgewählte Subjekt aus dem Array
+        let verbIndex = Math.floor(Math.random() * verbs.length);
+        verb = verbs.splice(verbIndex, 1)[0];
+    }
+})(GedichtsGenerator || (GedichtsGenerator = {})); // Entferne das ausgewählte
 //# sourceMappingURL=Poem.js.map
