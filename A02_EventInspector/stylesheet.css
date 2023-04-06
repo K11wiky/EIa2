@@ -1,12 +1,14 @@
 body {
     height: 100%;
-    background-color: rgb(116, 155, 128); /* set background color of body element to light peach */
+    background-color: rgb(46, 65, 58); /* set background color of body element to light peach */
 }
 
 h1 {
     position: relative; 
-    color: #843232; 
+    color: #fffefe; 
     font-family: orbitron;
+    font-style: oblique;
+    font-size: 45px;
 }
 
 div {
@@ -17,24 +19,24 @@ div {
 }
 
 #div0 {
-    background-color: #83303f; /* set background color of div0 element to light pink */
-    border-color: #3f3838; 
+    background-color: #ff2f55;  /* set background color of div0 element to light pink */
+    border-color: #ffffff; 
     border-style: solid; 
     margin-left: 10%;
     
 }
 
 #div1 {
-    background-color: #83303f; 
-    border-color: #3f3838; 
+    background-color: #ff2f55; 
+    border-color: #ffffff; 
     border-style: solid; 
     margin-left: 50%; 
 }
 
 span {
     position: fixed; /* position span elements fixed to the viewport */
-    background-color: #588c85; 
-    border-color: #000; 
+    background-color: #4e7463; 
+    border-color: #2c2828; 
     border-style: solid; 
     font-size: 15px;
     font-family: orbitron;
