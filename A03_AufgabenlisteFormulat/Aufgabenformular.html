@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haushalts-App</title>
+  <script src="augabenformular.js"></script>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Haushalts-App</h1>
+    </header>
+    <main>
+      <section id="add-task">
+        <h2>Aufgabe hinzufügen</h2>
+        <form>
+          <input type="text" name="title" placeholder="Titel" required>
+          <input type="datetime-local" name="deadline" required>
+          <select name="assignee" required>
+            <option value="">Zuständige Person auswählen</option>
+            <option value="Max">Max</option>
+            <option value="Lisa">Lisa</option>
+            <option value="Peter">Peter</option>
+          </select>
+          <textarea name="comment" placeholder="Kommentar"></textarea>
+          <button type="submit">Aufgabe hinzufügen</button>
+        </form>
+      </section>
+      <section id="task-list">
+        <h2>Aufgabenliste</h2>
+        <ul>
+          <li>
+            <h3>Aufgabe 1</h3>
+            <p>Zuständig: Max</p>
+            <p>Deadline: 2023-04-10 12:00</p>
+            <p>Kommentar: Diese Aufgabe muss dringend erledigt werden.</p>
+            <button class="edit-btn">Bearbeiten</button>
+            <button class="delete-btn">Löschen</button>
+          </li>
+          <li>
+            <h3>Aufgabe 2</h3>
+            <p>Zuständig: Lisa</p>
+            <p>Deadline: 2023-04-11 14:30</p>
+            <p>Kommentar: Diese Aufgabe ist nicht so wichtig.</p>
+            <button class="edit-btn">Bearbeiten</button>
+            <button class="delete-btn">Löschen</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
