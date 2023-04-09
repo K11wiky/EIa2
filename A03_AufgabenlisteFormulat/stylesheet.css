@@ -155,6 +155,62 @@ li {
 
 
 
+/*Logot style header*/
+#logobox{
+  position: absolute;
+
+ 
+
+}
+
+#logo{
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 0;
+  margin: auto;
+  height: 100px;
+  width:auto;
+}
+
+/*Navigationsliste*/
+
+.navigation{
+  position:fixed;
+  top:0;
+  right:0;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*style the buttoonssss*/
+.button{
+  text-decoration: none;
+  color: rgb(180, 180, 180);
+  margin: 20px;
+}
+
+.button:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.button:active{
+  color: white;
+  text-decoration: underline;
+}
+
+/* button of the ative site*/
+.button2{
+  color:white;
+  text-decoration: underline;
+  margin: 20px;
+}
+
+
+/*Footer*/
  
   footer{
     background-color:rgb(40, 40, 40);

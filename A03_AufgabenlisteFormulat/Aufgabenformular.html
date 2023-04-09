@@ -10,8 +10,15 @@
 </head>
 <body>
   <div class="container">
+    <a id="logobox"href="home.html">
+            <img id="logo" src="eu_stars.png">
     <header>
-      <h1 class="underline">Haushalts-App</h1>
+      <div class="navigation">
+        <a class="button2" href="Yourtasks.html">Deine Aufgaben</a>
+        <a class="button" href="home.html" >HOME</a>
+    </div>
+    <h1>Hauhalts-app</h1>
+    <p>"Don't make others say you are irresponsible"</p>
     </header>
     <main>
       <section id="add-task">
@@ -21,9 +28,9 @@
           <input type="datetime-local" name="deadline" required>
           <select name="assignee" required>
             <option value="">Zuständige Person auswählen</option>
-            <option value="Max">Max</option>
-            <option value="Lisa">Lisa</option>
-            <option value="Peter">Peter</option>
+            <option value="Max">Oliver</option>
+            <option value="Lisa">Lydia</option>
+            <option value="Peter">Kevin</option>
           </select>
           <textarea name="comment" placeholder="Kommentar"></textarea>
           <button type="submit">Aufgabe hinzufügen</button>
@@ -35,17 +42,19 @@
           <ul class="task-list">
             <li>
               <h3>Task 1</h3>
-              <p>Assigned to: John</p>
+              <p>Assigned to: Kevin</p>
               <p>Due date: 2023-05-01 10:00 AM</p>
               <p>Kommentar: Wichtig</p>
+              <p>Status: Überfällig</p>
               <button class="edit-btn">Edit</button>
               <button class="delete-btn">Erlädigt</button>
             </li>
             <li>
               <h3>Task 2</h3>
-              <p>Assigned to: Jane</p>
+              <p>Assigned to: Oliver</p>
               <p>Due date: 2023-05-05 3:00 PM</p>
               <p>Komentar: Nicht so wichtig</p>
+              <p>Status: Überfällig</p>
               <button class="edit-btn">Edit</button>
               <button class="delete-btn">Erlädigt</button>
             </li>
@@ -54,6 +63,8 @@
         </div>
         
       </section>
+      
+      
     </main>
   </div>
   <footer>
