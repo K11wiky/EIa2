@@ -1,6 +1,7 @@
 /*ich habe versucht eien interakivität hinzu zu fügen aber es taucht ein error auf*/
+
 body {
-  font-family: sans-serif;
+  font-family: Orbitron;
   margin: 0;
   padding: 0;
 }
@@ -8,6 +9,7 @@ body {
 header {
   background-color: #333;
   color: #fff;
+  border-radius: 20px;
   padding: 20px;
   text-align: center; /* Zentriert den Text */
 }
@@ -15,9 +17,9 @@ header {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #b5b9c6;
   border-radius: 5px;
-  background-color: #577189;
+  background-color: #43514c;
 }
 
 
@@ -66,6 +68,7 @@ select {
 }
 
 button[type="submit"] {
+  font-family: Orbitron;
   padding: 10px;
   background-color: #333;
   color: #fff;
@@ -77,6 +80,23 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #555;
+}
+
+ul {
+  size: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 50;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
 }
 
 .list-container {
@@ -112,11 +132,11 @@ button[type="submit"]:hover {
 }
 
 .task-list li button {
-  position: absolute;
+  position: relative;
   bottom: 5px;
   right: 5px;
   padding: 5px 10px;
-  background-color: #4CAF50;
+  background-color: #455945;
   border: none;
   color: white;
   border-radius: 5px;
@@ -124,12 +144,13 @@ button[type="submit"]:hover {
 }
 
 .task-list li button.edit-btn {
-  background-color: #2196F3;
+  background-color: #34383b;
   margin-right: 5px;
+  z-index: 1px;
 }
 
 .task-list li button:hover {
-  background-color: #3e8e41;
+  background-color: #373f37;
 }
 
 
@@ -182,3 +203,71 @@ button[type="submit"]:hover {
     border-radius: 5px;
     cursor: pointer;
   }
+
+  /* Für Bildschirme kleiner als 768px Breite (Tablets) */
+@media (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  section {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .task-list li {
+    width: 100%;
+  }
+  
+  ul {
+    padding: 0;
+    justify-content: center;
+  }
+  
+  li {
+    margin: 0 5px;
+    padding: 5px;
+  }
+  
+  footer {
+    padding: 10px;
+  }
+}
+
+/* Für Bildschirme kleiner als 480px Breite (Smartphones) */
+@media (max-width: 479px) {
+  .container {
+    padding: 5px;
+  }
+  
+  main {
+    padding: 5px;
+  }
+  
+  section {
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  
+  .task-list li {
+    width: 100%;
+  }
+  
+  ul {
+    padding: 0;
+    justify-content: center;
+  }
+  
+  li {
+    margin: 0 2px;
+    padding: 2px;
+  }
+  
+  footer {
+    padding: 5px;
+  }
+}
