@@ -22,6 +22,11 @@ header {
   background-color: #43514c;
 }
 
+.image {
+  margin: auto;
+  width: auto; 
+  height: 200px
+}
 
 main {
   padding: 20px;
