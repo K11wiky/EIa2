@@ -25,7 +25,7 @@ function handleLoad(_event: Event): void {
     button.addEventListener("click", customEvent);
 
     // Eventlistener für das selbst definierte Event "petTheCat" an das document gehängt
-    document.addEventListener("petTheCat", logInfo);
+    document.addEventListener("hungry", logInfo);
 }
 
 function setInfoBox(_event: MouseEvent): void {
@@ -58,7 +58,7 @@ function logInfo(_event: Event): void {
 function customEvent(_event: Event): void {
     // HTML-Button-Element und neues Custom-Event werden deklariert und zugewiesen
     let button: HTMLButtonElement = <HTMLButtonElement>_event.target;
-    let newEvent: CustomEvent = new CustomEvent("petTheCat", { bubbles: true });
+    let newEvent: CustomEvent = new CustomEvent("hungry", { bubbles: true });
 
     // Das Custom-Event wird ausgelöst
     button.dispatchEvent(newEvent);
