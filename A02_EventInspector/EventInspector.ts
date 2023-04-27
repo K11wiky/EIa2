@@ -24,7 +24,7 @@ function handleLoad(_event: Event): void {
     // Eventlistener für "click" an den button gehängt
     button.addEventListener("click", customEvent);
 
-    // Eventlistener für das selbst definierte Event "petTheCat" an das document gehängt
+    // Eventlistener für das selbst definierte Event "hungry" an das document gehängt
     document.addEventListener("hungry", logInfo);
 }
 
