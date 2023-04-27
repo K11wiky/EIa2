@@ -20,7 +20,7 @@ function handleLoad(_event) {
     // Eventlistener für "click" an den button gehängt
     button.addEventListener("click", customEvent);
     // Eventlistener für das selbst definierte Event "petTheCat" an das document gehängt
-    document.addEventListener("petTheCat", logInfo);
+    document.addEventListener("hungry", logInfo);
 }
 function setInfoBox(_event) {
     // Koordinaten des Mouse-Events, Target-Element und das span-Element werden deklariert und zugewiesen
@@ -46,7 +46,7 @@ function logInfo(_event) {
 function customEvent(_event) {
     // HTML-Button-Element und neues Custom-Event werden deklariert und zugewiesen
     let button = _event.target;
-    let newEvent = new CustomEvent("petTheCat", { bubbles: true });
+    let newEvent = new CustomEvent("hungry", { bubbles: true });
     // Das Custom-Event wird ausgelöst
     button.dispatchEvent(newEvent);
 }
